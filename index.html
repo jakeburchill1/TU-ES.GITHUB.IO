@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Tu Es</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: #F5F4EF;
     color: #000;
-    font-family: Futura, "Futura PT", "Avenir Next", Avenir, sans-serif;
+    font-family: Jost, Futura, sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -25,81 +10,29 @@ body {
 
 .container {
     text-align: center;
-    max-width: 600px;
-    padding: 40px;
 }
 
 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3rem;
     font-weight: 400;
+    letter-spacing: 0.05em;
     cursor: pointer;
     transition: opacity .25s ease;
-    letter-spacing: 0.02em;
 }
 
 h1:hover {
-    opacity: .55;
+    opacity: .5;
 }
 
 .content {
+    position: absolute;
+    top: calc(50% + 80px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
     display: none;
-    margin-top: 50px;
 }
-
-.email {
-    display: inline-block;
-    color: inherit;
-    text-decoration: none;
-    font-size: 1rem;
-    margin-bottom: 32px;
-}
-
-.email:hover {
-    opacity: .6;
-}
-
-.bio {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 400;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <h1 id="title">Tu Es</h1>
-
-    <div class="content" id="content">
-
-        <a class="email" href="mailto:Contact@Tu.es.com">
-            Contact@Tu.es.com
-        </a>
-
-        <p class="bio">
-            Tu Es is a creative studio founded by Jake and One. Working across
-            creative direction, spatial design, branding and live experiences,
-            the studio builds worlds for fashion, music and culture.
-        </p>
-
-    </div>
-
-</div>
-
-<script>
-const title = document.getElementById("title");
-const content = document.getElementById("content");
-
-title.addEventListener("click", () => {
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
-});
-</script>
-
-</body>
-</html>
