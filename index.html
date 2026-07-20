@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f4ef;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+
+h1:hover {
+    opacity: .5;
+}
+
+#email {
+    display: none;
+    position: absolute;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="title">STUDIO</h1>
+
+<div id="email">
+    hello@studio.com
+</div>
+
+<script>
+const title = document.getElementById("title");
+const email = document.getElementById("email");
+
+title.addEventListener("click", () => {
+    email.style.display =
+        email.style.display === "block" ? "none" : "block";
+});
+</script>
+
+</body>
+</html>
